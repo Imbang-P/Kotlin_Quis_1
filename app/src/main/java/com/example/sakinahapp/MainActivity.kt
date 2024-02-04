@@ -7,17 +7,14 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -67,109 +64,107 @@ fun SakinahInfo(modifier: Modifier = Modifier) {
         )
     }
 
-     Box() {
+    Box {
 
-         Image(
-             painter = painterResource(R.drawable.bg_list_hsi),
-             contentDescription = null,
-             modifier = modifier
-                 .padding(top = 200.dp, start = 20.dp, end = 20.dp)
-                 .size(450.dp)
-                 .clip(RoundedCornerShape(20.dp))
-         )
-         Column(
-             verticalArrangement = Arrangement.Top,
-             horizontalAlignment = Alignment.CenterHorizontally,
-             modifier = modifier
-                 .fillMaxWidth()
-                 .fillMaxHeight()
-                 .padding(top = 200.dp)
-         ) {
-             Text(
-                 text = stringResource(R.string.judul),
-                 fontWeight = FontWeight.Bold,
-                 fontSize = 20.sp,
-                 color = Color.Black,
-                 modifier = modifier
-                     .padding(10.dp)
-             )
-             Text(
-                 text = stringResource(R.string.deskripsi),
-                 fontSize = 15.sp,
-                 color = Color.Black,
-                 textAlign = TextAlign.Center,
-                 modifier = modifier
-                     .padding(top = 10.dp, start = 30.dp, end = 30.dp)
-             )
-         }
-         Row(
-             horizontalArrangement = Arrangement.SpaceEvenly,
-             verticalAlignment = Alignment.Top,
-             modifier = modifier
-                 .fillMaxWidth()
-                 .padding(top = 580.dp)
-         ) {
-             Button(onClick = { /*TODO*/ }) {
-                 Text(text = "Lewati")
-             }
-             Button(onClick = { /*TODO*/ }) {
-                 Text(text = "Isi CV")
-             }
-         }
-     }
-         Row(
-             horizontalArrangement = Arrangement.SpaceEvenly,
-             verticalAlignment = Alignment.Bottom,
-             modifier = Modifier
-                 .fillMaxWidth()
-                 .padding(8.dp)
-         ) {
-             Column(
-                 verticalArrangement = Arrangement.Center,
-                 horizontalAlignment = Alignment.CenterHorizontally,
-                 modifier = modifier
-                     .weight(1f)
-             ) {
-                 Image(
-                     painter = painterResource(R.drawable.icon_home_hsi),
-                     contentDescription = null,
-                     modifier = modifier
-                         .size(40.dp)
-                         .aspectRatio(1f)
-                 )
+        Image(
+            painter = painterResource(R.drawable.bg_list_hsi),
+            contentDescription = null,
+            modifier = modifier
+                .padding(top = 200.dp, start = 20.dp, end = 20.dp)
+                .size(450.dp)
+                .clip(RoundedCornerShape(20.dp))
+        )
+        Column(
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = modifier
+                .fillMaxSize()
+                .padding(top = 200.dp)
+        ) {
+            Text(
+                text = stringResource(R.string.judul),
+                fontWeight = FontWeight.Bold,
+                fontSize = 20.sp,
+                color = Color.Black,
+                modifier = modifier
+                    .padding(10.dp)
+            )
+            Text(
+                text = stringResource(R.string.deskripsi),
+                fontSize = 15.sp,
+                color = Color.Black,
+                textAlign = TextAlign.Center,
+                modifier = modifier
+                    .padding(top = 10.dp, start = 30.dp, end = 30.dp)
+            )
+        }
+        Row(
+            horizontalArrangement = Arrangement.SpaceEvenly,
+            verticalAlignment = Alignment.Top,
+            modifier = modifier
+                .fillMaxWidth()
+                .padding(top = 580.dp)
+        ) {
+            Button(onClick = { /*TODO*/ }) {
+                Text(text = "Lewati")
+            }
+            Button(onClick = { /*TODO*/ }) {
+                Text(text = "Isi CV")
+            }
+        }
+    }
+    Row(
+        horizontalArrangement = Arrangement.SpaceEvenly,
+        verticalAlignment = Alignment.Bottom,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(8.dp)
+    ) {
+        Column(
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = modifier
+                .weight(1f)
+        ) {
+            Image(
+                painter = painterResource(R.drawable.icon_home_hsi),
+                contentDescription = null,
+                modifier = modifier
+                    .size(40.dp)
+                    .aspectRatio(1f)
+            )
 
-             }
-             Column(
-                 verticalArrangement = Arrangement.Center,
-                 horizontalAlignment = Alignment.CenterHorizontally,
-                 modifier = modifier
-                     .weight(1f)
-             ) {
-                 Image(
-                     painter = painterResource(R.drawable.icon_pencarian_hsi),
-                     contentDescription = null,
-                     modifier = modifier
-                         .size(40.dp)
-                         .aspectRatio(1f)
-                 )
-             }
-             Column(
-                 verticalArrangement = Arrangement.Center,
-                 horizontalAlignment = Alignment.CenterHorizontally,
-                 modifier = modifier
-                     .weight(1f)
-             ) {
-                 Image(
-                     painterResource(R.drawable.icon_profil_hsi),
-                     contentDescription = null,
-                     modifier = modifier
-                         .size(40.dp)
-                         .aspectRatio(1f)
-                 )
-             }
-         }
-     }
-
+        }
+        Column(
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = modifier
+                .weight(1f)
+        ) {
+            Image(
+                painter = painterResource(R.drawable.icon_pencarian_hsi),
+                contentDescription = null,
+                modifier = modifier
+                    .size(40.dp)
+                    .aspectRatio(1f)
+            )
+        }
+        Column(
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = modifier
+                .weight(1f)
+        ) {
+            Image(
+                painterResource(R.drawable.icon_profil_hsi),
+                contentDescription = null,
+                modifier = modifier
+                    .size(40.dp)
+                    .aspectRatio(1f)
+            )
+        }
+    }
+}
 
 
 @Preview(showBackground = true)
